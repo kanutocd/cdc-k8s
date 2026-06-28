@@ -21,31 +21,27 @@ They maintain long-lived ownership of external resources.
 
 ## Operational Layers
 
+```
 Application
-↓
-
+   ↓
 CDC Runtime
-↓
-
+   ↓
 CDC Operations
-
-↓
-
+   ↓
 cdc-k8s
-
-↓
-
+   ↓
 Kubernetes
+```
 
 ## Deployment Model
 
+```
 Reader
-↓
-
+  ↓
 Workers
-↓
-
+  ↓
 Sinks
+```
 
 ## Responsibilities
 
