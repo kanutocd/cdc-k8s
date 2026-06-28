@@ -2,22 +2,53 @@
 
 Kubernetes operational adapter for the Ruby CDC Ecosystem.
 
-`cdc-kubernetes` maps CDC operational contracts to Kubernetes-native primitives:
+## Purpose
 
-- health probes
-- readiness probes
-- graceful shutdown
-- Kubernetes Leases
-- Prometheus metrics
-- ServiceMonitor templates
-- KEDA ScaledObjects
-- Helm charts
-- reader/worker topology
-- PodDisruptionBudgets
-- production deployment defaults
+`cdc-k8s` defines how CDC workloads should behave when running on Kubernetes.
 
-It is not a CDC runtime and does not process ChangeEvents.
+It provides the Kubernetes implementation of the operational contracts defined by `cdc-operations`.
 
-Its job is to answer:
+## Responsibilities
 
-> How should CDC workloads behave when Kubernetes starts, stops, probes, scales, evicts, or replaces them?
+- Kubernetes deployment model
+- Reader/Worker topology
+- Health semantics
+- Lifecycle integration
+- Graceful shutdown
+- Leader election
+- Metrics exposure
+- Prometheus integration
+- KEDA integration
+- Helm reference deployments
+- Production operational defaults
+
+## Non-Goals
+
+`cdc-k8s` does not:
+
+- define CDC semantics
+- process ChangeEvents
+- parse PostgreSQL replication
+- execute processors
+- implement orchestration logic
+
+Those concerns belong to:
+
+- cdc-core
+- cdc-parallel
+- cdc-concurrent
+- cdc-orchestrator-pro
+
+## Documentation
+
+- CDC_K8S_VISION.md
+- CDC_K8S_ARCHITECTURE.md
+- CDC_K8S_ADRS.md
+- TOPOLOGIES.md
+- KEDA.md
+- HEALTH.md
+- LIFECYCLE.md
+- LEADERSHIP.md
+- METRICS.md
+- HELM.md
+- ROADMAP.md
