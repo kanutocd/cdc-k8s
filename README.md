@@ -1,54 +1,38 @@
 # cdc-k8s
 
-Kubernetes operational adapter for the Ruby CDC Ecosystem.
+Infrastructure and platform engineering repository for the Ruby CDC Ecosystem.
 
-## Purpose
+`cdc-k8s` centralizes the shared artifacts used to build, test, package, release, deploy, observe, and operate `cdc-*` projects.
 
-`cdc-k8s` defines how CDC workloads should behave when running on Kubernetes.
+It includes Helm charts, Kubernetes manifests, KEDA examples, Prometheus assets, reusable GitHub Actions workflows, project templates, engineering standards, release conventions, Docker assets, and reference deployments.
 
-It provides the Kubernetes implementation of the operational contracts defined by `cdc-operations`.
+It is not a Ruby gem and does not process CDC events.
 
-## Responsibilities
+## Structure sample
 
-- Kubernetes deployment model
-- Reader/Worker topology
-- Health semantics
-- Lifecycle integration
-- Graceful shutdown
-- Leader election
-- Metrics exposure
-- Prometheus integration
-- KEDA integration
-- Helm reference deployments
-- Production operational defaults
-
-## Non-Goals
-
-`cdc-k8s` does not:
-
-- define CDC semantics
-- process ChangeEvents
-- parse PostgreSQL replication
-- execute processors
-- implement orchestration logic
-
-Those concerns belong to:
-
-- cdc-core
-- cdc-parallel
-- cdc-concurrent
-- cdc-orchestrator-pro
-
-## Documentation
-
-- VISION.md
-- ARCHITECTURE.md
-- ADRS.md
-- TOPOLOGIES.md
-- KEDA.md
-- HEALTH.md
-- LIFECYCLE.md
-- LEADERSHIP.md
-- METRICS.md
-- HELM.md
-- ROADMAP.md
+cdc-k8s/
+├── README.md
+├── VISION.md
+├── ARCHITECTURE.md
+├── ADRS.md
+│
+├── docs/
+│   ├── HELM.md
+│   ├── KEDA.md
+│   ├── GITHUB_ACTIONS.md
+│   ├── TEMPLATES.md
+│   ├── STANDARDS.md
+│   ├── RELEASES.md
+│   ├── CONTAINERS.md
+│   ├── OBSERVABILITY.md
+│   └── ROADMAP.md
+│
+├── charts/
+├── manifests/
+├── workflows/
+├── templates/
+├── standards/
+├── examples/
+├── dashboards/
+├── docker/
+└── scripts/

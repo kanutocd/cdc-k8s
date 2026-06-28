@@ -1,20 +1,24 @@
-# Helm
+# HELM.md
 
-Reference deployment for CDC workloads.
+## Purpose
+- Define Helm chart conventions for CDC ecosystem components.
 
-## Includes
+## Chart Structure
+- Standard Helm chart structure: `Chart.yaml`, `values.yaml`, `templates/`.
+- CDC-specific values guidance (e.g., replicas for reader vs. worker).
 
-- Reader deployment
-- Worker deployment
-- Services
-- ConfigMaps
-- Secrets
-- PodDisruptionBudgets
-- ServiceMonitors
-- KEDA ScaledObjects
+## Versioning
+- Align chart versions with application versions.
+- SemVer conventions.
 
-## Philosophy
+## Packaging & Releasing
+- Use `helm package` for chart packaging.
+- Release via Helm repo (e.g., GitHub Pages).
 
-Helm expresses the operational model defined by cdc-k8s.
+## Dependencies
+- Document external chart dependencies (if applicable).
+- Ensure dependency versions are pinned and audited.
 
-It is not the operational model itself.
+## Best Practices
+- Document common `values.yaml` patterns.
+- Encourage environment-specific values (dev, staging, prod).
