@@ -41,9 +41,9 @@ Those concerns belong to:
 
 ## Documentation
 
-- CDC_K8S_VISION.md
-- CDC_K8S_ARCHITECTURE.md
-- CDC_K8S_ADRS.md
+- VISION.md
+- ARCHITECTURE.md
+- ADRS.md
 - TOPOLOGIES.md
 - KEDA.md
 - HEALTH.md
